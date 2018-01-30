@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6f59d7e6c50713147ae73f6042fe274a
+timeCreated: 1503258201
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - firePot: {fileID: 1545238226235322, guid: 7ec6dbb03100e9749805fbff42dee6e6, type: 2}
+  - icePot: {fileID: 1219961512168918, guid: bdee0ad571b595b478489e911ffb226b, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
