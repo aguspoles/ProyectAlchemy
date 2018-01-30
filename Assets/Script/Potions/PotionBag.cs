@@ -23,9 +23,9 @@ public class PotionBag : MonoBehaviour {
         m_mousePoint = GameObject.Find("MousePoint").GetComponent<MousePoint>();
 
 
-        AddPotion(CraftingDataBase.PotionsList.FirePotion);
-        AddPotion(CraftingDataBase.PotionsList.HealPotion);
-        AddPotion(CraftingDataBase.PotionsList.FirePotion);
+        //AddPotion(CraftingDataBase.PotionsList.FirePotion);
+
+       
     }
 
     void Update ()

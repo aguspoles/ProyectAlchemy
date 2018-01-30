@@ -18,10 +18,12 @@ public class Crafting : MonoBehaviour {
         ingredientsBag = new List<List<CraftingDataBase.IngredientList>>();
 
         //Test
-        //PickUpIngredient(CraftingDataBase.IngredientList.Ash, 2);
-        //PickUpIngredient(CraftingDataBase.IngredientList.FireStone, 2);
-        //PickUpIngredient(CraftingDataBase.IngredientList.Snowflake, 2);
-        //PickUpIngredient(CraftingDataBase.IngredientList.IceStone, 2);
+        PickUpIngredient(CraftingDataBase.IngredientList.SpeedFlower, 2);
+        PickUpIngredient(CraftingDataBase.IngredientList.FireStone, 2);
+        PickUpIngredient(CraftingDataBase.IngredientList.OmniaStone, 10);
+        PickUpIngredient(CraftingDataBase.IngredientList.IceStone, 2);
+        PickUpIngredient(CraftingDataBase.IngredientList.MeteoriteShard, 2);
+        PickUpIngredient(CraftingDataBase.IngredientList.MedHerb, 2);
     }
 	
 	// Update is called once per frame

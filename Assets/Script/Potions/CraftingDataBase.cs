@@ -18,13 +18,14 @@ public class CraftingDataBase : MonoBehaviour {
     public enum IngredientList
     {
         None = -1,
-        Ash = 0,
+        OmniaStone = 0,
         FireStone = 1,
         Snowflake = 2,
         IceStone = 3,
         MedHerb = 4,
         SpeedFlower = 5,
-        MeteoriteShard = 6
+        MeteoriteShard = 6,
+        Ash = 7
     }
 
     static private PotionsList[,] potionAtlas;
@@ -50,6 +51,7 @@ public class CraftingDataBase : MonoBehaviour {
         }
 
         //Combinations
+        /*
         //Ash
 		potionAtlas[(int)IngredientList.Ash, (int)IngredientList.FireStone] = PotionsList.FirePotion;
 
@@ -71,6 +73,23 @@ public class CraftingDataBase : MonoBehaviour {
 
         //MeteoriteShard
         potionAtlas[(int)IngredientList.MeteoriteShard, (int)IngredientList.MeteoriteShard] = PotionsList.GravPotion;
+        */
+
+
+        potionAtlas[(int)IngredientList.OmniaStone, (int)IngredientList.FireStone] = PotionsList.FirePotion;
+        potionAtlas[(int)IngredientList.FireStone, (int)IngredientList.OmniaStone] = PotionsList.FirePotion;
+
+        potionAtlas[(int)IngredientList.OmniaStone, (int)IngredientList.IceStone] = PotionsList.IceFloor;
+        potionAtlas[(int)IngredientList.IceStone, (int)IngredientList.OmniaStone] = PotionsList.IceFloor;
+
+        potionAtlas[(int)IngredientList.OmniaStone, (int)IngredientList.MeteoriteShard] = PotionsList.GravPotion;
+        potionAtlas[(int)IngredientList.MeteoriteShard, (int)IngredientList.OmniaStone] = PotionsList.GravPotion;
+
+        potionAtlas[(int)IngredientList.OmniaStone, (int)IngredientList.SpeedFlower] = PotionsList.HastePotion;
+        potionAtlas[(int)IngredientList.SpeedFlower, (int)IngredientList.OmniaStone] = PotionsList.HastePotion;
+
+        potionAtlas[(int)IngredientList.OmniaStone, (int)IngredientList.MedHerb] = PotionsList.HealPotion;
+        potionAtlas[(int)IngredientList.MedHerb, (int)IngredientList.OmniaStone] = PotionsList.HealPotion;
 
         potionsData = new List<Potions>();
   
@@ -82,13 +101,14 @@ public class CraftingDataBase : MonoBehaviour {
 
         ingredientsData = new List<Ingredient>();
 
-        ingredientsData.Insert((int)IngredientList.Ash, GetComponentInChildren<Ash>());
+        ingredientsData.Insert((int)IngredientList.OmniaStone, GetComponentInChildren<OmniaStone>());
         ingredientsData.Insert((int)IngredientList.FireStone, GetComponentInChildren<FireStone>());
         ingredientsData.Insert((int)IngredientList.Snowflake, GetComponentInChildren<Snowflake>());
         ingredientsData.Insert((int)IngredientList.IceStone, GetComponentInChildren<IceStone>());
         ingredientsData.Insert((int)IngredientList.MedHerb, GetComponentInChildren<MedHerb>());
         ingredientsData.Insert((int)IngredientList.SpeedFlower, GetComponentInChildren<SpeedFlower>());
         ingredientsData.Insert((int)IngredientList.MeteoriteShard, GetComponentInChildren<MeteoriteShard>());
+        ingredientsData.Insert((int)IngredientList.Ash, GetComponentInChildren<Ash>());
 
         GameObject.Find("PotionsData").SetActive(false);
         GameObject.Find("IngredientsData").SetActive(false);

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ash : Ingredient {
+public class OmniaStone : Ingredient {
 
 	void Start () {
-        ingCode = CraftingDataBase.IngredientList.Ash;
+        ingCode = CraftingDataBase.IngredientList.OmniaStone;
 	}
 }
